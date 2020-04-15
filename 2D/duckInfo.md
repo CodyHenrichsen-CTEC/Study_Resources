@@ -1,11 +1,10 @@
-#2D Array Resources
+# 2D Array Resources
 
 This directory contains images of ducks in an egg carton AKA a 2D array. A few sample questions are below. Please use as needed.
 
-![Sample Duck Image]
-(https://github.com/CodyHenrichsen-CTEC/Study_Resources/blob/master/2D/IMG_0912.jpg)
+![Sample Duck Image](https://github.com/CodyHenrichsen-CTEC/Study_Resources/blob/master/2D/IMG_0912.jpg "Sample duck")
 
-##*Sample Questions*
+## Sample Questions
 
 * What is the location of the solo magenta duck in the picture?
 * Write a for-each loop to count only the blue ducks.
