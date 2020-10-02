@@ -5,6 +5,8 @@ Notes are PDF's of lecture notes
 
 #Java Topics
 
+Content is arranged based on the AP CS A Course and Exam Description. Extra topics in the Advanced folder
+
 - ArrayList
 - Arrays
     1. One Dimension
