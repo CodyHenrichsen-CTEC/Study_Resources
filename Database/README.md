@@ -8,9 +8,16 @@
 
 ## Oracle
  - SQL Developer Intro
+ - Oracle based date notes
 
 ## SQL Language
  - DML
  - DCL
  - DDL
  - DQL
+   * Select Query basics
+   * String and math functions
+   * Aggregate functions
+   * Simple Joins
+   * Subqueries
+ 
