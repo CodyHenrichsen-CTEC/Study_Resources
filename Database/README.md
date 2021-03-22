@@ -25,6 +25,7 @@
    * Set Operations
  
 ## Lecture Notes
+These are the PDF of the lectures that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
  - Subquery Review
  - Scalar Subqueries
  - Set Operations
