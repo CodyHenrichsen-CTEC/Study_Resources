@@ -28,3 +28,7 @@
  - Subquery Review
  - Scalar Subqueries
  - Set Operations
+ - DML Lecture
+ - DCL Lecture
+ - DDL Lecture
+ - Simple SQL Selection lecture
