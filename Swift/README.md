@@ -1,5 +1,7 @@
 # Swift Study Guides and Lecture notes
 
+Introduction to the Swift language and how to use it to make applications for iOS. 
+
 ## Swift Language
  - Intro
  - Basics
@@ -8,7 +10,7 @@
  - Protocols
  - Tuples
 
-## SwiftUI (current UI Style)
+## SwiftUI (current user interface style)
  - SwiftUI basics
 
 ## UIViewController based UI
