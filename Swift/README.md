@@ -3,12 +3,16 @@
 ## Swift Language
  - Intro
  - Basics
- - Classes
+ - Classes (from a Java perspective 😼 )
  - Optionals
  - Protocols
  - Tuples
 
 ## SwiftUI (current UI Style)
+ - SwiftUI basics
 
 ## UIViewController based UI
  - UIViewController notes
+ - Transitions
+ - Drawing
+ 
