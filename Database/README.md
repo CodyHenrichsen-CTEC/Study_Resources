@@ -5,6 +5,7 @@
 ## Database Theory
  - Normalization
  - Select Query Basics
+ - Breaking down problems
 
 ## MariaDB and MySQL
 
@@ -14,7 +15,7 @@
 
 ## SQL Language
  - DML: The CRUD 😼
- - DCL: Access Control ☠️🤮
+ - DCL: Access Control ☠️
  - DDL: Table Structure 🤯
  - DQL: Queries 🧙‍♀️😻
    * Select Query basics
