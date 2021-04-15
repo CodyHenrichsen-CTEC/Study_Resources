@@ -5,26 +5,12 @@ Notes are PDF's of lecture notes
 
 ## Java Topics
 
-Content is arranged based on the AP CS A Course and Exam Description. Extra topics in the Advanced folder
-
-- ArrayList
-- Arrays
-    1. One Dimension
-    2. Two Dimension
-- Constructors
-- GUI
-- Popup
-- JPanel
-- Console
-- File IO
-- Inheritance
-- Math
-- Loops
-- Sorting
+Content is arranged based on the AP CS A Course and Exam Description. GUI is in the Java Swing folder. Additional topics in the Advanced folder
 
 ## Swift Topics
+Developing for iOS devices and addressing big picture view of computer science
  - Swift
-   1. UIViewController based
  - SwiftUI
+
 ## SQL Topics
-Located in the database folder
+Latest notes are based on Oracle DB. Older versions include references to MySQL and MariaDB. 
