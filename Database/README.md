@@ -15,6 +15,7 @@
 
 ## SQL Language
  - DML: The CRUD 😼
+   * CRUD basics
  - DCL: Access Control ☠️
  - DDL: Table Structure 🤯
  - DQL: Queries 🧙‍♀️😻
@@ -24,6 +25,7 @@
    * Simple Joins
    * Subqueries
    * Set Operations
+   * Outer Joins
  
 ## Lecture Notes
 These are the PDF of the lectures that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
@@ -34,3 +36,4 @@ These are the PDF of the lectures that accompany these topics. Many have been se
  - DCL Lecture
  - DDL Lecture
  - Simple SQL Selection lecture
+ - CRUD: Insert
