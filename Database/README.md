@@ -26,6 +26,8 @@
    * Subqueries
    * Set Operations
    * Outer Joins
+ - TCL: Restore/Backup 💾
+  * TCL Basics 
  
 ## Lecture Notes
 These are the PDF of the lectures that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
@@ -37,3 +39,5 @@ These are the PDF of the lectures that accompany these topics. Many have been se
  - DDL Lecture
  - Simple SQL Selection lecture
  - CRUD: Insert
+ - Left Outer Join mini notes
+ - TCL mini notes
