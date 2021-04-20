@@ -1,6 +1,6 @@
-# Database Study Guides
+# Database Study Guides and Lecture Notes
 
-
+Study guides have vocabulary and questions you should be able to answer after reading about the associated topics. Lecture notes are the 3 slide export with notes of powerpoints for reviewing concepts.
 
 ## Database Theory
  - Normalization
@@ -38,6 +38,9 @@ These are the PDF of the lectures that accompany these topics. Many have been se
  - DCL Lecture
  - DDL Lecture
  - Simple SQL Selection lecture
- - CRUD: Insert
+ - CRUD
+  * INSERT
+  * UPDATE
+  * DELETE
  - Left Outer Join mini notes
  - TCL mini notes
