@@ -27,7 +27,7 @@ Study guides have vocabulary and questions you should be able to answer after re
    * Set Operations
    * Outer Joins
  - TCL: Restore/Backup 💾
-  * TCL Basics 
+   * TCL Basics 
  
 ## Lecture Notes
 These are the PDF of the lectures that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
@@ -39,8 +39,8 @@ These are the PDF of the lectures that accompany these topics. Many have been se
  - DDL Lecture
  - Simple SQL Selection lecture
  - CRUD
-  * INSERT
-  * UPDATE
-  * DELETE
+   * INSERT
+   * UPDATE
+   * DELETE
  - Left Outer Join mini notes
  - TCL mini notes
