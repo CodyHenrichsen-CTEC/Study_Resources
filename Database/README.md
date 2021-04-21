@@ -1,6 +1,6 @@
 # Database Study Guides and Lecture Notes
 
-Study guides have vocabulary and questions you should be able to answer after reading about the associated topics. Lecture notes are the 3 slide export with notes of powerpoints for reviewing concepts.
+Study guides have vocabulary and questions you should be able to answer after reading about the associated topics. 
 
 ## Database Theory
  - Normalization
@@ -30,7 +30,7 @@ Study guides have vocabulary and questions you should be able to answer after re
    * TCL Basics 
  
 ## Lecture Notes
-These are the PDF of the lectures that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
+These are the PDF 3 page notes from the slideshows that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
  - Subquery Review
  - Scalar Subqueries
  - Set Operations
