@@ -37,6 +37,7 @@ These are the PDF 3 page notes from the slideshows that accompany these topics. 
  - DML Lecture
  - DCL Lecture
  - DDL Lecture
+ - DDL Overview (oracle focus)
  - Simple SQL Selection lecture
  - CRUD
    * INSERT
