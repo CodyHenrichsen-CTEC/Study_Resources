@@ -6,7 +6,7 @@ Study guides have vocabulary and questions you should be able to answer after re
  - Normalization
  - Select Query Basics
  - Breaking down problems
-
+ - Database data types
 ## MariaDB and MySQL
 
 ## Oracle Specific Info
@@ -18,6 +18,7 @@ Study guides have vocabulary and questions you should be able to answer after re
    * CRUD basics
  - DCL: Access Control ☠️
  - DDL: Table Structure 🤯
+   * DDL Review 
  - DQL: Queries 🧙‍♀️😻
    * Select Query basics
    * String and math functions
