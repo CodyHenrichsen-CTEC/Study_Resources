@@ -32,6 +32,8 @@ Study guides have vocabulary and questions you should be able to answer after re
  
 ## Lecture Notes
 These are the PDF 3 page notes from the slideshows that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
+ - Normalization process
+ - Simple Select queries
  - Subquery Review
  - Scalar Subqueries
  - Set Operations
