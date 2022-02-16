@@ -99,19 +99,19 @@ SELECT
 FROM
     dual;
 
--- Can't use EXTRACT on a DATE!
+-- Use EXTRACT on a DATE!
 SELECT
     prodname AS product_name,
     prodnextshipdate AS next_ship_date
 FROM
-    product;
+    product
 WHERE
-    EXTRACT MONTH FROM prodnextshipdate = 2;
--- Still NOPERS
+    EXTRACT (MONTH FROM prodnextshipdate) = 2;
+
 SELECT
     prodname AS product_name,
     prodnextshipdate AS next_ship_date,
-    EXTRACT MONTH FROM prodnextshipdate AS month_data
+    EXTRACT (MONTH FROM prodnextshipdate) AS month_data
 FROM
     product;
 
