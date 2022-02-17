@@ -8,7 +8,14 @@ FROM
     product;
 
 -- Using dates in a WHERE clause
-
+-- Before: 10 rows
+SELECT
+   prodname AS product_name,
+   prodnextshipdate AS next_ship_date
+FROM
+    product;
+-- After 
+-- Using EXTRACT in the WHERE
 SELECT
     prodname AS product_name,
     prodnextshipdate AS next_ship_date
@@ -17,14 +24,8 @@ FROM
 WHERE
     EXTRACT (MONTH FROM prodnextshipdate) = 2;
 
--- Before: 10 rows
-SELECT
-   prodname AS product_name,
-   prodnextshipdate AS next_ship_date
-FROM
-    product;
 
--- After 
+
 -- using WHERE: To find days or years with 07
 SELECT
     prodname AS product_name,
@@ -34,7 +35,7 @@ FROM
 WHERE
     TO_CHAR(prodnextshipdate, 'DD-YY') LIKE '%07%';
 
--- using WHERE: To find February as the month
+-- Using WHERE: To find February as the month
 SELECT
     prodname AS product_name,
     prodnextshipdate AS next_ship_date
@@ -115,13 +116,14 @@ FROM
     dual;
 
 
--- Using the OVERLAPS comparison
+-- Using the OVERLAPS command
+-- Base query
 SELECT
    ordname AS customer_name,
    TO_CHAR(orddate, 'DD Day') AS date_day 
 FROM
     ordertbl;
-
+-- Limit results to those that overlap
 SELECT
    ordname AS customer_name,
    TO_CHAR(orddate, 'DD Day') AS date_day 
