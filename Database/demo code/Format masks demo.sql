@@ -30,7 +30,7 @@ FROM
 SELECT
     TO_CHAR(SYSDATE, 'MM/DD/YYYY fmDay' ) || ' the '  
     || TO_CHAR(SYSDATE, 'ddspth') || ' of ' 
-    || TO_CHAR(SYSDATE, 'Month, YYYY') AS overdone_but_valid
+    || TO_CHAR(SYSDATE, 'fmMonth, YYYY') AS overdone_but_valid
 FROM
     dual;
 
