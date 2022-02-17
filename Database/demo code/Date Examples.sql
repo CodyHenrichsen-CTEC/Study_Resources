@@ -1,4 +1,21 @@
+-- Use EXTRACT on a DATE!
+
+SELECT
+    prodname AS product_name,
+    prodnextshipdate AS next_ship_date,
+    EXTRACT (MONTH FROM prodnextshipdate) AS month_data
+FROM
+    product;
+
 -- Using dates in a WHERE clause
+
+SELECT
+    prodname AS product_name,
+    prodnextshipdate AS next_ship_date
+FROM
+    product
+WHERE
+    EXTRACT (MONTH FROM prodnextshipdate) = 2;
 
 -- Before: 10 rows
 SELECT
@@ -42,11 +59,9 @@ SELECT
 FROM
     product
 WHERE
-    INSTR(TO_CHAR(prodnextshipdate, 'DD/MM/YYYY') ,'JAN') > 0;
+    INSTR(TO_CHAR(prodnextshipdate, 'DD/MM/YYYY') ,'JAN') > 0; -- only sees month in numeric values!
 
--- Nope Section! 
-
--- Can't just dump crap into the TO_CHAR function
+-- Can't just dump random crap into the TO_CHAR function
 SELECT
     TO_CHAR(SYSDATE, 'MM/DD/YYYY Day' || ' the ' || 'DDspth' || ' of ' || 'Month, YYYY') AS bizarre_request
 FROM
@@ -64,7 +79,7 @@ FROM
 
 -- Intervals interact with dates
 
--- Too much effort to add time!
+-- Lets take too much effort to add time!
 SELECT
     EXTRACT (MONTH FROM TO_YMINTERVAL('3-05')) AS month_info,
     ADD_MONTHS(SYSDATE, EXTRACT (MONTH FROM TO_YMINTERVAL('3-05'))) AS date_interval_manip
@@ -99,21 +114,6 @@ SELECT
 FROM
     dual;
 
--- Use EXTRACT on a DATE!
-SELECT
-    prodname AS product_name,
-    prodnextshipdate AS next_ship_date
-FROM
-    product
-WHERE
-    EXTRACT (MONTH FROM prodnextshipdate) = 2;
-
-SELECT
-    prodname AS product_name,
-    prodnextshipdate AS next_ship_date,
-    EXTRACT (MONTH FROM prodnextshipdate) AS month_data
-FROM
-    product;
 
 -- Using the OVERLAPS comparison
 SELECT
