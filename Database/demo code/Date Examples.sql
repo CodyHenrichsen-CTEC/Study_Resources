@@ -1,5 +1,11 @@
--- Use EXTRACT on a DATE!
+-- Base query
+SELECT
+   prodname AS product_name,
+   prodnextshipdate AS next_ship_date
+FROM
+    product;
 
+-- Use EXTRACT on a DATE!
 SELECT
     prodname AS product_name,
     prodnextshipdate AS next_ship_date,
@@ -9,11 +15,7 @@ FROM
 
 -- Using dates in a WHERE clause
 -- Before: 10 rows
-SELECT
-   prodname AS product_name,
-   prodnextshipdate AS next_ship_date
-FROM
-    product;
+
 -- After 
 -- Using EXTRACT in the WHERE
 SELECT
