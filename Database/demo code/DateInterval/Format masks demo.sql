@@ -34,3 +34,13 @@ SELECT
 FROM
     dual;
 
+-- Twosday query
+SELECT
+    TO_CHAR(TO_DATE('02/02/2022', 'DD/MM/YYYY'), 'Day, DD/MM/YYYY') AS almost_twos_day,
+    TO_CHAR(TO_DATE('22/02/2022', 'DD/MM/YYYY'), 'Day, DD/MM/YYYY') AS twos_day,
+    TO_CHAR(TO_DATE('02/02/2222', 'DD/MM/YYYY'), 'Day, DD/MM/YYYY') AS twos_day_next,
+    TO_CHAR(TO_DATE('22/02/2222', 'DD/MM/YYYY'), 'Day, DD/MM/YYYY') AS twos_day_after
+FROM
+    dual;
+    
+
