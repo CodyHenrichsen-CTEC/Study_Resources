@@ -48,3 +48,13 @@ These are the PDF 3 page notes from the slideshows that accompany these topics. 
    * DELETE
  - Left Outer Join mini notes
  - TCL mini notes
+
+## Demo Code
+This directory includes code to use as examples of specific types of queries
+ - CRUD
+ - Aggregate functions
+ - DDL
+ - Date Interval
+  * General DATE examples
+  * Format mask demos
+  * INTERVAL and OVERLAPS
