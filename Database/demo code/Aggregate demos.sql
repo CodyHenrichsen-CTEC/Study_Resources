@@ -73,7 +73,7 @@ FROM
 GROUP BY
     section_id;
 
--- Adding a third function
+-- Adding a second function
 SELECT
     section_id,
     AVG(student_id) AS ridiculous,
@@ -95,7 +95,23 @@ GROUP BY
 HAVING
     COUNT(*) > 4
 ORDER BY
-    COUNT(*),
-    section_id
+    enroll_count ASC,
+    section_id ASC
 ;
 
+-- Using the HAVING and WHERE clauses to restrict results
+SELECT
+    section_id,
+    COUNT(*) AS enroll_count
+FROM
+    enrollment
+WHERE
+    section_id < 100
+GROUP BY -- Written AFTER the WHERE clause! Executed BEFORE the WHERE clause
+    section_id
+HAVING
+    COUNT(*) > 4
+ORDER BY
+    enroll_count ASC,
+    section_id DESC
+;
