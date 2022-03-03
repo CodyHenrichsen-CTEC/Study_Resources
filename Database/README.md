@@ -7,6 +7,7 @@ Study guides have vocabulary and questions you should be able to answer after re
  - Select Query Basics
  - Breaking down problems
  - Database data types
+ - Execution order images
 ## MariaDB and MySQL
 
 ## Oracle Specific Info
@@ -37,6 +38,7 @@ These are the PDF version of the lecture notes (3 slides per page) that accompan
  - Oracle Date and Time
  - SQL Functionality
  - Aggregate Functions
+ - Simple JOIN's
  - Subquery Review
  - Scalar Subqueries
  - Set Operations
@@ -57,6 +59,8 @@ This directory includes code to use as examples of specific types of queries
  - CRUD
  - Aggregate functions
  - DDL
+ - JOIN samples
+ - JOIN conversion
  - Date Interval
    * General DATE examples
    * Format mask demos
