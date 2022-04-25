@@ -14,3 +14,7 @@ Developing for iOS devices and addressing big picture view of computer science
 
 ## SQL Topics
 Latest notes are based on Oracle DB. Older versions include references to MySQL and MariaDB. 
+
+## Data Structures
+
+Guiding readings and notes about data structures. Will include notes for C++ and Java versions of implementation as well
