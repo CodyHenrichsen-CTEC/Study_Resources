@@ -66,33 +66,6 @@ REFERENCES
 ON DELETE
     CASCADE;
     
-   CREATE TABLE foods
-(
-    food_id NUMBER(3) PRIMARY KEY,
-    name VARCHAR(20) NOT NULL,
-    description VARCHAR(100) NOT NULL
-    
-);
-
-CREATE TABLE people
-(
-    person_id NUMBER(3) PRIMARY KEY,
-    first_name VARCHAR(25) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    favorite_food NUMBER(3)
-);
-
-ALTER TABLE
-    people
-ADD CONSTRAINT
-    fk_foods_people
-FOREIGN KEY
-    (favorite_food)
-REFERENCES
-    foods (food_id)
-ON DELETE
-    CASCADE;
- 
 INSERT INTO
     people
     (last_name, first_name, person_id)
@@ -119,7 +92,8 @@ VALUES
     
 );
 
--- unsanitized data insert
+-- How to handle unsanitized data insertions
+-- concantenation option 
 INSERT INTO foods
 (
     food_id,
