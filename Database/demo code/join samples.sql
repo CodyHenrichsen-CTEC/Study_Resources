@@ -85,3 +85,67 @@ GROUP BY
 ORDER BY
     students ASC
 ;
+
+-- Build-a-query results
+--AM
+SELECT
+    sec.course_no,
+    cou.description,
+    ins.street_address,
+    COUNT(*) AS num_grades
+FROM
+    instructor ins
+JOIN
+    section sec
+ON
+    ins.instructor_id = sec.instructor_id
+JOIN
+    course cou
+ON
+    cou.course_no = sec.course_no
+JOIN
+    enrollment enr
+ON
+    sec.section_id = enr.section_id
+JOIN
+    grade gra
+ON
+    enr.section_id = gra.section_id
+    AND
+    enr.student_id = gra.student_id
+GROUP BY
+    sec.course_no,
+    cou.description,
+    ins.street_address
+ORDER BY
+    num_grades,
+    ins.street_address;
+--PM
+SELECT
+    stu.first_name,
+    stu.zip,
+    sec.course_no,
+    AVG(gra.numeric_grade) AS average_grade,
+    gra.created_date
+FROM
+    grade gra
+JOIN
+    enrollment enr
+ON
+    gra.student_id = enr.student_id
+    AND
+    gra.section_id = enr.section_id
+JOIN
+    student stu
+ON
+    stu.student_id = enr.student_id
+JOIN
+    section sec
+ON
+    sec.section_id = enr.section_id
+GROUP BY
+    stu.first_name,
+    stu.zip,
+    sec.course_no,
+    gra.created_date
+;    

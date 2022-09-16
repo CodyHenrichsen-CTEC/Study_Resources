@@ -82,6 +82,9 @@ SELECT
 FROM
   demo;
 
+
+
+
 INSERT INTO zipcode
 (
     city,
@@ -266,7 +269,7 @@ FROM
 WHERE
     zip LIKE '84%';
 
-
+COMMIT;
 
 
 
