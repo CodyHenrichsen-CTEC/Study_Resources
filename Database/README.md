@@ -35,6 +35,8 @@ Study guides have vocabulary and questions you should be able to answer after re
 These are the PDF version of the lecture notes (3 slides per page) that accompany these topics. Many have been seen on my youtube channel as part of the corresponding demo/lecture.
  - Normalization process
  - Simple Select queries
+ - Data Cardinality
+ - The WHERE clause
  - Oracle Date and Time
  - SQL Functionality
  - Aggregate Functions
@@ -59,6 +61,7 @@ This directory includes code to use as examples of specific types of queries
  - CRUD
  - Aggregate functions
  - DDL
+ - WHERE samples
  - JOIN samples
  - JOIN conversion
  - Date Interval
