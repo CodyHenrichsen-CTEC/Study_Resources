@@ -31,7 +31,7 @@ SELECT
 FROM
     dual;
 
---corect version
+--correct version
 SELECT
     EXTRACT (DAY FROM INTERVAL '03 02:45:21' DAY TO SECOND) AS corrected_version
 FROM
