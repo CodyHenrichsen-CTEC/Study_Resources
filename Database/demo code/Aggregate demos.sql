@@ -6,6 +6,16 @@ FROM
     reservations
 ;
 
+-- Incorrect because missing the GROUP BY clause
+-- Causes the Oracle 00937/00979 error!
+SELECT
+    airline,
+    passenger_first_name,
+    COUNT(*) AS flights_by_name
+FROM
+    reservations
+;
+
 -- Coalesce results based on the same airline and first names
 SELECT
     airline,
@@ -16,16 +26,6 @@ FROM
 GROUP BY
     airline,
     passenger_first_name
-;
-
--- Incorrect because missing the GROUP BY clause
--- Causes the Oracle 00979 error!
-SELECT
-    airline,
-    passenger_first_name,
-    COUNT(*) AS flights_by_name
-FROM
-    reservations
 ;
 
 -- Adding a HAVING clause.
@@ -148,4 +148,31 @@ GROUP BY
     student_id
 HAVING
     COUNT(*) > 2
+;
+
+-- Write a SELECT statement that displays the average room capacity 
+-- for each course.Display the average, expressed to the nearest
+--  whole number, in another column.Use a column alias for each
+-- column selected
+
+-- Stub
+SELECT
+    capacity
+FROM
+    course
+;
+-- Base
+SELECT
+    capacity AS real_capacity
+FROM
+    section -- note the change in table!
+;
+-- Answer
+SELECT
+    course_no,
+    AVG (capacity) AS average_capacity,  
+    ROUND (AVG (capacity), 0) AS whole_average
+FROM
+    section
+
 ;
