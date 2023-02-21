@@ -73,7 +73,7 @@ FROM
 GROUP BY
     section_id;
 
--- Adding a second function
+-- Adding a third function
 SELECT
     section_id,
     AVG(student_id) AS ridiculous,
@@ -107,11 +107,45 @@ FROM
     enrollment
 WHERE
     section_id < 100
-GROUP BY -- Written AFTER the WHERE clause! Executed BEFORE the WHERE clause
+GROUP BY 
     section_id
 HAVING
     COUNT(*) > 4
 ORDER BY
     enroll_count ASC,
     section_id DESC
+;
+
+-- Write a SELECT statement that shows student IDs 
+-- and the number of courses each student is
+-- enrolled in. 
+-- Show only those enrolled in more than two classes.
+
+-- Stub
+SELECT
+    student_id
+FROM
+    enrollment
+;
+
+-- Base
+SELECT
+    student_id,
+    COUNT(*) AS enrolled_count
+FROM
+    enrollment
+GROUP BY
+    student_id
+;
+
+-- Answer
+SELECT
+    student_id,
+    count(*) AS enrolled_count
+FROM
+    enrollment
+GROUP BY
+    student_id
+HAVING
+    COUNT(*) > 2
 ;
