@@ -151,8 +151,8 @@ HAVING
 ;
 
 -- Write a SELECT statement that displays the average room capacity 
--- for each course.Display the average, expressed to the nearest
---  whole number, in another column.Use a column alias for each
+-- for each course. Display the average, expressed to the nearest
+--  whole number, in another column. Use a column alias for each
 -- column selected
 
 -- Stub
