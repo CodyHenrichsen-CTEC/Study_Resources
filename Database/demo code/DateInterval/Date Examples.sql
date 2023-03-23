@@ -3,7 +3,8 @@ SELECT
    prodname AS product_name,
    prodnextshipdate AS next_ship_date
 FROM
-    product;
+    product
+;
 
 SELECT
     student_id,

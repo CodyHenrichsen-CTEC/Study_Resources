@@ -1,29 +1,4 @@
-SELECT
-    gra.student_id, 
-    gra.section_id, 
-    gra.numeric_grade
-FROM 
-    grade gra
-WHERE 
-    gra.grade_type_code = 'FI'
-    AND 
-    gra.numeric_grade > ANY
-    (
-        SELECT 
-            in_grade.numeric_grade
-        FROM 
-            grade in_grade
-        WHERE 
-            in_grade.grade_type_code = 'HM'
-            AND 
-            gra.section_id = in_grade.section_id
-            AND 
-            gra.student_id = in_grade.student_id
-    )
-;    
-
-
-
+-- Bad demo for finding all the student ids whose section is less than any of the ones with more than three
 SELECT
     stu.student_id
 FROM
@@ -33,7 +8,7 @@ JOIN
 ON
     enr.student_id = stu.student_id
 WHERE
-    enr.section_id < ANY
+    enr.section_id < ANY 
     (
         SELECT
             in_enr.section_id
@@ -46,20 +21,27 @@ WHERE
     )
 ;
 
--- Students who arent enrolled in classes
+
+-- Find all the students who AREN'T in classes with more than three students
 SELECT
-    stu.first_name,
-    stu.last_name
+    stu.student_id
 FROM
     student stu
-WHERE NOT EXISTS
+JOIN
+    enrollment enr
+ON
+    enr.student_id = stu.student_id
+WHERE
+    enr.section_id NOT IN
     (
         SELECT
-            'X'
+            in_enr.section_id
         FROM
-            enrollment enr
-        WHERE
-            enr.student_id = stu.student_id
+            enrollment in_enr
+        GROUP BY
+            in_enr.section_id
+        HAVING
+            COUNT (*) > 3
     )
 ;
 
@@ -206,3 +188,22 @@ WHERE
     )
 ;     
 
+--
+
+SELECT 
+    out_co.course_no, 
+    out_co.description, 
+    out_co.cost
+FROM 
+    course out_co
+WHERE 
+    out_co.cost IN
+    (
+        SELECT 
+            in_co.cost
+        FROM 
+            course in_co
+        WHERE 
+            in_co.prerequisite = 20
+    )
+;
