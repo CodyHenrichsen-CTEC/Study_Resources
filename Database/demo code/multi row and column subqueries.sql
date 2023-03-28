@@ -1,4 +1,4 @@
--- Bad demo for finding all the student ids whose section is less than any of the ones with more than three
+-- Bad 🫠 demo for finding all the student ids whose section is less than any of the ones with more than three
 SELECT
     stu.student_id
 FROM
@@ -45,7 +45,7 @@ WHERE
     )
 ;
 
-
+-- Base query for java classes
 SELECT 
     cou.course_no
 FROM
@@ -54,6 +54,8 @@ WHERE
     cou.description LIKE '%Java%'
 ;
 
+
+-- Find the students in java classes
 SELECT
     stu.first_name,
     stu.last_name
@@ -78,7 +80,7 @@ WHERE
             cou.description LIKE '%Java%'
     )
 ;
-
+-- Remade via the WITH/AS clauses
 WITH java_courses AS
 (
         SELECT 
@@ -110,8 +112,6 @@ WHERE
             java_courses
     )
 ;
-
-
 
 --any/all
 
