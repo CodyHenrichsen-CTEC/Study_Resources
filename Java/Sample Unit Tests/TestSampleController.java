@@ -61,13 +61,13 @@ class UpdateControllerTest
 
 
 	@Test
-	void testBuildPokedexText()
+	void testFrame()
 	{
-		assertTrue(testedController != null, "Can't be null");
+		assertTrue(testedController.getFrame() != null, "Can't be null");
 	}
 
 	@Test
-	void testGetPokemonData()
+	void testSomeOtherPiece()
 	{
 		assertEquals("Description", testedController.toString(), "Words match");
 	}
