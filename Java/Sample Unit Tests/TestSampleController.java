@@ -1,7 +1,19 @@
 package poke.tests; // Change!!!!
 
+/**
+ * Project imports
+ */
+
 import poke.controller.Controller; // Change!!!!
 
+/**
+ * Reflection imports
+ */
+import java.lang.reflect.*;
+
+/**
+ * JUnit imports
+ */
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
@@ -23,6 +35,30 @@ class UpdateControllerTest
 	{
 		this.testedController  = null;
 	}
+
+
+	@Test
+	void testStartMethod()
+	{
+		Method [] methods = testedPanel.getClass().getDeclaredMethods();
+
+		boolean hasStart = false;
+
+		for (Method method : methods)
+		{
+
+			if (method.getName().equals("start"))
+			{
+				hasStart = true;
+				assertTrue(Modifier.isPublic(method.getModifiers()), "The start method must be public");
+			}
+		}
+
+		assertTrue(hasStart, "The Controller needs a start method");
+
+	}
+
+
 
 	@Test
 	void testBuildPokedexText()
