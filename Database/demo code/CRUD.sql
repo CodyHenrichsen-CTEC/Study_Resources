@@ -56,7 +56,7 @@ VALUES
 	'Quax',
 	'Quackers',
 	'987 Database Ln',
-	'10015',
+	'84119',
 	'987.654.3210',
 	'CTEC',
 	SYSDATE,
