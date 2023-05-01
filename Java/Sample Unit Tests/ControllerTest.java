@@ -1,10 +1,10 @@
-package poke.tests; // Change!!!!
+package xxx.tests; // Change!!!!
 
 /**
  * Project imports
  */
 
-import poke.controller.Controller; // Change!!!!
+import xxx.controller.Controller; // Change!!!!
 
 /**
  * Reflection imports
@@ -20,7 +20,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class UpdateControllerTest
+public class ControllerTest
 {
 	private Controller testedController;
 
@@ -40,7 +40,7 @@ class UpdateControllerTest
 	@Test
 	void testStartMethod()
 	{
-		Method [] methods = testedPanel.getClass().getDeclaredMethods();
+		Method [] methods = testedController.getClass().getDeclaredMethods();
 
 		boolean hasStart = false;
 

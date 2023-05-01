@@ -1,11 +1,11 @@
-package chat.tests; //Change me
+package xxx.tests; //Change me
 
 
 /**
  * Project imports
  */
-import chat.controller.Controller; //Change me
-import chat.view.ChatPanel; //Change me
+import xxx.controller.Controller; //Change me
+import xxx.view.XxxPanel; //Change me
 import javax.swing.*;
 
 import java.awt.*;
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class PanelTest
+public class PanelTest
 {
 	private Controller testedController; //Change me
 	private ChatPanel testedPanel; //Change me

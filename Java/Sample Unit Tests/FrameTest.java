@@ -1,11 +1,11 @@
-package chat.tests; //Change!
+package xxx.tests; //Change!
 
 /**
  * Project imports
  */
-import chat.controller.Controller; //Change!
-import chat.view.ChatPanel; //Change!
-import chat.view.ChatFrame; //Change!
+import xxx.controller.Controller; //Change!
+import xxx.view.ChatPanel; //Change!
+import xxx.view.ChatFrame; //Change!
 import javax.swing.*;
 
 import java.awt.Component;
@@ -22,7 +22,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class FrameTest
+public class FrameTest
 {
 	private Controller testedController; //Change!
 	private ChatFrame testedFrame; //Change!
