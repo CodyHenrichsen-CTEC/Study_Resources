@@ -138,7 +138,7 @@ VALUES
 (
     2,
     'dark chocolate',
-    'dairy free'||'&'||'MAX(vegan approved)'
+    'dairy free & MAX(vegan approved)'
     
 );
 
