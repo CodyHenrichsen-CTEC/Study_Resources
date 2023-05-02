@@ -103,13 +103,29 @@ INSERT INTO foods
 VALUES
 (
     42,
-    'Nori',
+    'Sliced Nori',
     ''||'&'||'MAX(asd)'
     
 );
 
 --or 
 SET DEFINE OFF; -- then the insert statement
+
+
+INSERT INTO foods
+(
+    food_id,
+    name,
+    description
+)
+VALUES
+(
+    2,
+    'dark chocolate',
+    'dairy free'||'&'||'MAX(vegan approved)'
+    
+);
+
 
 --clean up demo code
 DROP TABLE
