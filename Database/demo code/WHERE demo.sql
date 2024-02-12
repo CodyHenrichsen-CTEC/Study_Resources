@@ -1,6 +1,6 @@
 -- Demonstrating the different ways to limit
 -- results of a query using the WHERE clause
--- February 2 2023
+-- February 2 2024
 
 -- Equality
 SELECT
@@ -122,10 +122,33 @@ FROM
 WHERE
     (
         course_no LIKE '_5_'
+        AND
+        course_no != '050'
     )
     OR
     (
         course_no > 200
     )
 ;
+
+-- Compound logic in a WHERE clause
+-- Last name must have EITHER second letter of 'a' or third letter of 'i' 
+-- AND the first name needs to end in 'y'
+
+SELECT
+    firstName AS first,
+    lastName AS last,
+    city
+FROM
+    students
+WHERE
+    (
+        lastName LIKE '_a%'
+        OR
+        lastName LIKE '__i%'
+    )
+    AND
+    firstName LIKE '%y'
+;
+
 
