@@ -20,7 +20,8 @@ SELECT
     prodnextshipdate AS next_ship_date,
     EXTRACT (MONTH FROM prodnextshipdate) AS month_data
 FROM
-    product;
+    product
+;
 
 SELECT
     student_id,
