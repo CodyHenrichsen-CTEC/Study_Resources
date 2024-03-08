@@ -1,3 +1,5 @@
+-- Demonstrating how to use the numeric format masks for decimal information
+
 SELECT
     3 AS some_integer,
     3.10 AS simple_decimal,
