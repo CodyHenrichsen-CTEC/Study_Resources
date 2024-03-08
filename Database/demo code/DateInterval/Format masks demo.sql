@@ -44,3 +44,11 @@ FROM
     dual;
     
 
+-- Handling padding
+
+SELECT
+    TO_CHAR(SYSDATE, 'fmDay fmMonth fmDdspth fmyear') AS to_much_fm,
+    TO_CHAR(SYSDATE, 'fmDay Month Ddspth year') AS less_fm_is_better
+FROM
+    dual
+;
