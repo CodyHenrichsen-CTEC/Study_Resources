@@ -16,7 +16,7 @@ FROM
         prof.firstName
     FROM
         professors prof
-) NAMES
+) names
 GROUP BY
     names.name
 ORDER BY
