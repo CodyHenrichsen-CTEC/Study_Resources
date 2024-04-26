@@ -121,8 +121,8 @@ WITH customers_demo AS
 SELECT
 	*
 FROM
-	customers_demo;
-
+	customers_demo
+;
 
 
 INSERT INTO zipcode
@@ -202,6 +202,24 @@ UPDATE
 SET
 	city = 'Kearns';
 
+UPDATE
+	product
+SET
+	prodName = 'bluetooth speaker'
+;
+
+ROLLBACK;
+
+UPDATE
+	product
+SET
+	prodName = 'bluetooth speaker',
+	prodQOH = 100
+WHERE
+	prodNO = '234'
+;
+
+
 ROLLBACK;
 
 UPDATE 
@@ -235,6 +253,16 @@ DELETE FROM
 	zipcode
 
 ROLLBACK; --!!!!!
+
+DELETE FROM
+	product
+;
+-- error - FK violation
+
+DELETE FROM
+	ordLine;
+DELETE FROM
+	product;
 
 DELETE FROM
 	zipcode
