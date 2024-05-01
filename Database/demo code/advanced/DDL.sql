@@ -107,9 +107,27 @@ VALUES
     'Roasted seaweed!'
     
 );
+-- Bad INSERT  (Dirty Data)
+INSERT INTO foods
+(
+    food_id,
+    name,
+    description
+)
+VALUES
+(
+    42,
+    'Sliced Nori',
+    '& MAX(asd)'
+    
+);
 
 -- How to handle unsanitized data insertions
 -- concantenation option 
+
+
+
+
 INSERT INTO foods
 (
     food_id,
