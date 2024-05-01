@@ -105,7 +105,7 @@ public class PanelTest
 			}
 			if (component instanceof JPanel)
 			{
-				JPanel subPanel = (JPanel) current;
+				JPanel subPanel = (JPanel) component;
 				assertTrue(subPanel.getLayout() instanceof GridLayout, "Subpanels need GridLayout as the layout manager");
 			}
 		}

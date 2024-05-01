@@ -64,6 +64,7 @@ public class ControllerTest
 
 		for (Method method : methods)
 		{
+			Type[] types = method.getGenericParameterTypes();
 
 			if (method.getName().equals("start"))
 			{
