@@ -107,7 +107,7 @@ VALUES
     'Roasted seaweed!'
     
 );
--- Bad INSERT  (Dirty Data)
+-- Bad INSERT  (Dirty Data) -- Brings up a dialog for enter substitution value 😿
 INSERT INTO foods
 (
     food_id,
