@@ -4,9 +4,11 @@
 -- Lets take too much effort to add time!
 SELECT
     EXTRACT (MONTH FROM TO_YMINTERVAL('3-05')) AS month_info,
+    EXTRACT (YEAR FROM TO_YMINTERVAL('3-05')) AS year_info,
     ADD_MONTHS(SYSDATE, EXTRACT (MONTH FROM TO_YMINTERVAL('3-05'))) AS date_interval_manip
 FROM
-    dual;
+    dual
+;
 
 -- Better use of combining DATE and INTERVAL    
 SELECT
@@ -22,20 +24,23 @@ SELECT
     TO_CHAR(SYSDATE - TO_YMINTERVAL('0-4'), 'DD MM YYYY') || ' was four months ago!' AS interval_demo,
     TO_CHAR(SYSDATE + TO_DSINTERVAL('3 4:45:32'), 'DD MM YYYY') || ' is three days and a few hours from now!' AS interval_demo_two
 FROM
-    dual;
+    dual
+;
 
 
 --error version
 SELECT
     EXTRACT (DAY FROM INTERVAL '3:2' DAY TO SECOND) AS error_version
 FROM
-    dual;
+    dual
+;
 
 --correct version
 SELECT
     EXTRACT (DAY FROM INTERVAL '03 02:45:21' DAY TO SECOND) AS corrected_version
 FROM
-    dual;
+    dual
+;
 
 -- Using the OVERLAPS command
 -- Base query
@@ -43,7 +48,8 @@ SELECT
    ordname AS customer_name,
    TO_CHAR(orddate, 'DD Day') AS date_day 
 FROM
-    ordertbl;
+    ordertbl
+;
 -- Limit results to those that overlap
 SELECT
    ordname AS customer_name,
@@ -53,4 +59,5 @@ FROM
 WHERE
     (orddate, orddate) 
     OVERLAPS 
-    (TO_DATE('10/01/2007','DD/MM/YYYY'), TO_YMINTERVAL('0-1'));
+    (TO_DATE('10/01/2007','DD/MM/YYYY'), TO_YMINTERVAL('0-1'))
+;

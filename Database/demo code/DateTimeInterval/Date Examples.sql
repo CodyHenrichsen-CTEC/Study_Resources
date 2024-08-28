@@ -1,7 +1,7 @@
 -- Base query
 SELECT
    prodname AS product_name,
-   prodnextshipdate AS next_ship_date
+   prodNextShipDate AS next_ship_date
 FROM
     product
 ;
@@ -17,10 +17,11 @@ FROM
 -- Use EXTRACT on a DATE!
 SELECT
     prodname AS product_name,
-    prodnextshipdate AS next_ship_date,
-    EXTRACT (MONTH FROM prodnextshipdate) AS month_data
+    prodNextShipDate AS next_ship_date,
+    EXTRACT (MONTH FROM prodNextShipDate) AS month_data
 FROM
-    product;
+    product
+;
 
 SELECT
     student_id,
@@ -50,22 +51,24 @@ WHERE
 -- Using EXTRACT in the WHERE
 SELECT
     prodname AS product_name,
-    prodnextshipdate AS next_ship_date
+    prodNextShipDate AS next_ship_date
 FROM
     product
 WHERE
-    EXTRACT (MONTH FROM prodnextshipdate) = 2;
+    EXTRACT (MONTH FROM prodNextShipDate) = 2;
 
 
 
 -- using WHERE: To find days or years with 07
 SELECT
-    prodname AS product_name,
-    prodnextshipdate AS next_ship_date
+    prodName AS product_name,
+    prodNextShipDate AS next_ship_date
 FROM
     product
 WHERE
-    TO_CHAR(prodnextshipdate, 'DD-YY') LIKE '%07%';
+    TO_CHAR(prodNextShipDate, 'DD-YY') LIKE '%07%';
+;
+
 
 SELECT
     section_id AS class,
@@ -81,20 +84,20 @@ WHERE
 -- Using WHERE: To find February as the month
 SELECT
     prodname AS product_name,
-    prodnextshipdate AS next_ship_date
+    prodNextShipDate AS next_ship_date
 FROM
     product
 WHERE
-    TO_CHAR(prodnextshipdate, 'MON') = 'FEB';
+    TO_CHAR(prodNextShipDate, 'MON') = 'FEB';
 
 -- Evaluate a date as text
 SELECT
     prodname AS product_name,
-    prodnextshipdate AS next_ship_date
+    prodNextShipDate AS next_ship_date
 FROM
     product
 WHERE
-    INSTR(prodnextshipdate ,'JAN') > 0;
+    INSTR(prodNextShipDate ,'JAN') > 0;
 
 
 SELECT
@@ -109,11 +112,11 @@ WHERE
 -- But if looking at the masked data nopers
 SELECT
     prodname AS product_name,
-    prodnextshipdate AS next_ship_date
+    prodNextShipDate AS next_ship_date
 FROM
     product
 WHERE
-    INSTR(TO_CHAR(prodnextshipdate, 'DD/MM/YYYY') ,'JAN') > 0; -- only sees month in numeric values!
+    INSTR(TO_CHAR(prodNextShipDate, 'DD/MM/YYYY') ,'JAN') > 0; -- only sees month in numeric values!
 
 SELECT
     student_id,
@@ -123,3 +126,14 @@ FROM
 WHERE
     INSTR (TO_CHAR(enroll_date, 'DD-MM-YYYY'), 'FEB') > 0
 ;
+
+-- Can't just mismatch date components
+
+SELECT
+    TO_DATE('April Thursday','Month Day') AS text
+FROM
+    dual
+;
+
+-- Error report -
+-- ORA-01835: day of week conflicts with Julian date

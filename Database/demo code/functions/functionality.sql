@@ -5,10 +5,10 @@
 
 SELECT
     LOWER(city) || ' ' || city AS small_and_normal_city,
-    UPPER(modified_by) AS BIG_MOD,
+    UPPER(lastName) AS BIG_MOD,
     SUBSTR(city, 4) AS partial_city_name
 FROM
-    zipcode
+    professors
 WHERE
     MOD(zip, 2) = 0;
 
@@ -34,11 +34,12 @@ FROM
     dual;
     
 SELECT
-    SUBSTR (first_name, 2) AS partial_first,
-    SUBSTR (last_name, LENGTH(last_name) / 2 ) AS last_half_name,
-    SUBSTR (first_name, -4) AS last_four_letters_of_first
+    firstName as FIRST,
+    SUBSTR (firstName, 2) AS partial_first,
+    SUBSTR (lastName, LENGTH(lastName) / 2 ) AS last_half_name,
+    SUBSTR (firstName, -4) AS last_four_letters_of_first
 FROM
-    student;
+    students;
 
 -- Numeric functions
     
@@ -59,13 +60,14 @@ FROM
 SELECT
     first_name,
     CASE
-        WHEN zip < 1000 THEN 'here'
-        WHEN zip < 3999 THEN 'there'
-        WHEN zip > 4000 THEN 'over there ish'
+        WHEN zip < 10000 THEN 'here'
+        WHEN zip < 39999 THEN 'there'
+        WHEN zip > 40000 THEN 'over there ish'
+        WHEN zip > 70000 THEN 'aways ish'
         ELSE 'idk'
     END AS where_are_they
 FROM
-    student;
+    students;
     
 -- The OK way to work with NULL
 

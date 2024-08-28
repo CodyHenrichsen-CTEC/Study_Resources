@@ -123,9 +123,9 @@ ORDER BY
 
 -- Stub
 SELECT
-    student_id
+    studentID
 FROM
-    enrollment
+    registration
 ;
 
 -- Base

@@ -1,11 +1,11 @@
-package xxx.tests; //Change!
+package xyz.tests; //Change!
 
 /**
  * Project imports
  */
-import xxx.controller.Controller; //Change!
-import xxx.view.ChatPanel; //Change!
-import xxx.view.ChatFrame; //Change!
+import xyz.controller.Controller; //Change!
+import xyz.view.XYZPanel; //Change!
+import xyz.view.XYZFrame; //Change!
 import javax.swing.*;
 
 import java.awt.Component;
@@ -25,13 +25,13 @@ import org.junit.jupiter.api.Test;
 public class FrameTest
 {
 	private Controller testedController; //Change!
-	private ChatFrame testedFrame; //Change!
+	private XYZFrame testedFrame; //Change!
 
 	@BeforeEach
 	void setUp() throws Exception
 	{
 		this.testedController = new Controller();
-		this.testedFrame = new ChatFrame(testedController);
+		this.testedFrame = new XYZFrame(testedController);
 	}
 
 	@AfterEach
@@ -44,11 +44,13 @@ public class FrameTest
 	@Test
 	void testChatFrame()
 	{
-		assertTrue(testedFrame instanceof JFrame, "... needs to extend JFrame");
+		assertTrue(testedFrame instanceof JFrame, "XYZFrame needs to extend JFrame");
 		Method [] methods = testedFrame.getClass().getDeclaredMethods();
 		assertTrue(methods.length == 1, "You need 1 method in the ChatFrame");
+		assertTrue(methods[0].getName().equals("setupFrame"), "The XYZFrame needs to have a method named setupFrame");
+		assertTrue(!testedFrame.isResizable(), "Your XYZFrame should NOT be resizable!");
 		assertTrue(testedFrame.getTitle().length() > 5, "Your title needs at least 6 letters");
-		assertTrue(testedFrame.getContentPane() instanceof ChatPanel, "Your ChatFrame needs to have a ChatPanel inside");  //Change!
+		assertTrue(testedFrame.getContentPane() instanceof XYZPanel, "Your XYZFrame needs to have a XYZPanel inside");  //Change!
 	}
 
 }

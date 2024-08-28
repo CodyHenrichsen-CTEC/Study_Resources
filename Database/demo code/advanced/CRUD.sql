@@ -12,6 +12,22 @@ VALUES
 );
 
 
+INSERT INTO product
+(
+	prodNO,
+	prodName,
+	prodMFG,
+	prodPrice
+)
+VALUES
+(
+	'P12345',
+	'Portable hole',
+	'ACME corp.',
+	123.10
+);
+
+
 INSERT INTO zipcode
 (
     city,
@@ -82,7 +98,31 @@ SELECT
 FROM
   demo;
 
-
+INSERT INTO customer
+(
+	custNO,
+	custFirstName,
+	custLastName,
+	custBal
+)
+WITH customers_demo AS
+(
+	SELECT
+		'Cust 1',
+		'First',
+		'Last',
+		123.45
+	FROM
+		dual
+	UNION ALL
+	SELECT 'cust 2', 'first 2', 'last 2', 0 FROM dual UNION ALL
+	SELECT 'sda', 'as', 'asdasdasd', 123454 FROM dual
+)
+SELECT
+	*
+FROM
+	customers_demo
+;
 
 
 INSERT INTO zipcode
@@ -162,6 +202,24 @@ UPDATE
 SET
 	city = 'Kearns';
 
+UPDATE
+	product
+SET
+	prodName = 'bluetooth speaker'
+;
+
+ROLLBACK;
+
+UPDATE
+	product
+SET
+	prodName = 'bluetooth speaker',
+	prodQOH = 100
+WHERE
+	prodNO = '234'
+;
+
+
 ROLLBACK;
 
 UPDATE 
@@ -195,6 +253,16 @@ DELETE FROM
 	zipcode
 
 ROLLBACK; --!!!!!
+
+DELETE FROM
+	product
+;
+-- error - FK violation
+
+DELETE FROM
+	ordLine;
+DELETE FROM
+	product;
 
 DELETE FROM
 	zipcode
