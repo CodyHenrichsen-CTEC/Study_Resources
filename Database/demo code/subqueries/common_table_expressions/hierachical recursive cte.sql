@@ -1,6 +1,8 @@
-WITH hierarchy_demo (subjectCode, courseNumber, prequisite, courseID) AS
+
+
+WITH hierarchy_demo (subjectCode, courseNumber, prerequisite, courseID) AS
 (
-    SELECT 
+    SELECT -- Anchor Query
         cou.subjectCode,
         cou.courseNumber,
         cou.prerequisite,
@@ -12,7 +14,7 @@ WITH hierarchy_demo (subjectCode, courseNumber, prequisite, courseID) AS
 
     UNION ALL
 
-    SELECT
+    SELECT -- Recursive Query
         cour.subjectCode,
         cour.courseNumber,
         cour.prerequisite,
@@ -34,9 +36,10 @@ WHERE
 ;
 
 
-WITH hierarchy_demo_level (course_name, prequisite, id, prereq_count) AS
+
+WITH hierarchy_demo_level (course_name, prerequisite, id, prereq_count) AS
 (
-    SELECT 
+    SELECT -- Anchor Query
         cou.subjectCode || ' ' || cou.courseNumber AS course_name,
         cou.prerequisite,
         cou.courseID,
@@ -48,11 +51,11 @@ WITH hierarchy_demo_level (course_name, prequisite, id, prereq_count) AS
 
     UNION ALL
 
-    SELECT
+    SELECT -- Recursive Query
         cour.subjectCode || ' ' || cour.courseNumber AS course_name,
         cour.prerequisite,
         cour.courseID,
-        demo.prereq_count + 1
+        demo.prereq_count + 1 -- Shows the depth of recursion!
     FROM
         courses cour
     JOIN

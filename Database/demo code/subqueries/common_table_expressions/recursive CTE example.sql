@@ -1,6 +1,6 @@
 WITH demo (field, field_two) AS -- Alias Field list enclosed in parens
 (
-    SELECT -- The 
+    SELECT -- The Anchor Query
         field,
         field_two
     FROM
@@ -8,13 +8,13 @@ WITH demo (field, field_two) AS -- Alias Field list enclosed in parens
     
     UNION ALL
 
-    SELECT
+    SELECT  -- The recursive query
         field,
         field_two
     FROM 
         demo
     WHERE
-        field = 'tested'
+        field = 'tested'  -- The logic to END recursive queries - NOTE this is FAKE!!
 )
 SELECT
     *
@@ -25,18 +25,19 @@ FROM
 
 WITH demo (num) AS
 (
-    SELECT
-        1
+    SELECT  -- Anchor Query
+        10
     FROM
         dual
+    
     UNION ALL
 
-    SELECT
-        num + 1 AS total
+    SELECT -- Recursive Query
+        num - 1 AS total
     FROM
         demo
     WHERE
-        num < 10
+        num > 0
 )
 SELECT
     * 

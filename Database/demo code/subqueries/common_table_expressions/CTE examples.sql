@@ -1,21 +1,5 @@
 -- Contrived CTE example
 
--- I want all the students that have a last name starting with letters W - V 
--- and are enrolled in CS 1410 and have more than two graded assignments.
--- and I need their total registration course count
-
-SELECT
-    stu.studentID
-FROM
-    students stu
-JOIN
-    enrollment enr
-ON
-    enr.studentID = stu.studentID
-WHERE
-    stu.lastName BETWEEN 'W' AND 'V'
-    ;
-
 WITH named_query AS 
 (
     SELECT

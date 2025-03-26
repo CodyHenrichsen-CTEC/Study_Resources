@@ -1,3 +1,5 @@
+-- Basic Structure of an Inline View
+
 SELECT
     sub.field_name
 FROM
@@ -11,6 +13,7 @@ FROM
 WHERE
     sub.other > 123
 ;
+
 
 -- In the FROM clause for TOP N results
 
@@ -32,6 +35,7 @@ FROM
 WHERE
     ROWNUM < 10
 ;
+
 
 -- In a JOIN clause
 
