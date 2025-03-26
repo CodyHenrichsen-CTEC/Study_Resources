@@ -63,17 +63,27 @@ These are the PDF version of the lecture notes (3 slides per page) that accompan
 
 ## Demo Code
 This directory includes code to use as examples of specific types of queries. These are all .sql files and most include comments separating the concepts.
+ - Stubs
  - CRUD
- - Aggregate function demos
  - DCL demo
  - DDL
  - Set operations
  - SET operations vs JOIN
  - WITH AS demo
- - Simple subqueries
- - Multirow and column subqueries
+ - Subqueries
+   * Simple
+   * Inline views
+   * multi row/column
+   * Select clause subquery
+   * Common Table Expressions
+     - CTE Examples
+     - WITH AS Demo
+     - Hierarchical Recursive
+     - Recursive CTE
  - Handling NULL in queries
- - functionality
+ - functions
+   * Aggregate Functions
+   * Basic functionality
  - WHERE demo
  - JOIN samples
  - JOIN conversion
