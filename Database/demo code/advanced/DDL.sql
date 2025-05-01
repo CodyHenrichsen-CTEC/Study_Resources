@@ -142,7 +142,7 @@ VALUES
     
 );
 
---or (not preferred)
+-- or (not preferred)
 SET DEFINE OFF; 
 
 -- then the insert statement
@@ -161,7 +161,7 @@ VALUES
 );
 
 
---clean up demo code
+-- clean up demo code
 DROP TABLE -- Have to drop the people table first. 
 people;
 DROP TABLE
