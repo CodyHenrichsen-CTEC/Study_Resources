@@ -16,7 +16,7 @@ FROM
 -- Example
 -- Note the use of tabs to verify all fields are properly aligned to values!
 INSERT INTO
-    students (firstName, lastName, studentID, streetAddress, city, state, zip, phone, admissionDate)
+    students (firstName,    lastName,       studentID, streetAddress,   city,           state,          zip,        phone,          admissionDate)
 WITH student_inserts AS
 (
     SELECT 'example'        ,'student'      , 0     , 'nowhere'         , 'na'          , '??'          , '-999'    , '1234561234'  , TO_DATE('05/01/2025','DD/MM/YYYY') FROM dual UNION ALL
