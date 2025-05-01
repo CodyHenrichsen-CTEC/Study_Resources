@@ -1,3 +1,5 @@
+ -- Structure of an ALTER statement for Foreign Key Creation
+
 ALTER TABLE
     table_name
 ADD CONSTRAINT
@@ -8,6 +10,7 @@ REFERENCES
     other_table_name (primary_key)
 ;
 
+-- Structure with optional trigger example
 ALTER TABLE
     table_name
 ADD CONSTRAINT
@@ -16,9 +19,11 @@ FOREIGN KEY
     (field_name_in_parens)
 REFERENCES
     other_table_name (primary_key)
--- Optional Triggers:
--- ON DELETE [NO ACTION / CASCADE / SET NULL]
+-- Optional Triggers: ON DELETE [NO ACTION / CASCADE / SET NULL]
+ON DELETE CASCADE
 ;
+
+-- Sample tables for foreign key creation
 
 CREATE TABLE sales
 (
@@ -30,11 +35,11 @@ CREATE TABLE sales
 
 CREATE TABLE exporters
 (
-    id PRIMARY KEY,
     export_destination_code NUMBER(5,0) NOT NULL
     -- Other fields not shown
 );
 
+-- ALTER statement for FK on the sales table
 ALTER TABLE
     sales
 ADD CONSTRAINT
